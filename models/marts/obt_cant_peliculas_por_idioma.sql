@@ -1,6 +1,6 @@
 -- Modelo mart: Cantidad de películas por idioma
 with peliculas_idioma as (
-    select * from {{ ref('peliculas_con_idioma') }}
+    select * from {{ ref('int_peliculas_con_idioma') }}
 )
 
 select

@@ -1,9 +1,9 @@
 -- Modelo intermediate: Películas con idioma
 with peliculas as (
-    select * from {{ ref('peliculas') }}
+    select * from {{ ref('stg_peliculas') }}
 ),
 idioma as (
-    select * from {{ ref('idioma') }}
+    select * from {{ ref('stg_idioma') }}
 )
 
 select
