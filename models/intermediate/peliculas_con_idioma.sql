@@ -1,0 +1,17 @@
+-- Modelo intermediate: Películas con idioma
+with peliculas as (
+    select * from {{ ref('peliculas') }}
+),
+idioma as (
+    select * from {{ ref('idioma') }}
+)
+
+select
+    p.id,
+    p.titulo,
+    p.descripcion,
+    p.ano,
+    p.puntaje,
+    i.nombre as idioma
+from peliculas p
+left join idioma i on p.idioma_id = i.id

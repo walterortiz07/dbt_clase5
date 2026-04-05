@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: dvd_rental
+    database: clase5
+    schema: dvd_rental
+    tables:
+      - name: film
+      - name: language
+
+  - name: northwind
+    database: clase5
+    schema: northwind
+    tables:
+      - name: customers
