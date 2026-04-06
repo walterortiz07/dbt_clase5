@@ -7,35 +7,35 @@
 
 Todos los modelos y sus columnas principales están documentados en los archivos schema.yml. Esto permite que la documentación generada por dbt sea clara y útil para cualquier usuario del proyecto.
 
-**Ejemplo de documentación:**
+**Documentación:**
 
 **stg_peliculas**
 - Modelo staging de películas, renombra y estandariza campos de la tabla film.
-	- `id`: Identificador único de la película.
-	- `idioma_id`: Identificador del idioma de la película.
-	- `titulo`: Título de la película.
-	- `puntaje`: Puntaje de la película.
+  - `id`: Identificador único de la película.
+  - `idioma_id`: Identificador del idioma de la película.
+  - `titulo`: Título de la película.
+  - `puntaje`: Puntaje de la película.
 
 **stg_idioma**
 - Modelo staging de idiomas, renombra y estandariza campos de la tabla language.
-	- `id`: Identificador único del idioma.
-	- `nombre`: Nombre del idioma.
+  - `id`: Identificador único del idioma.
+  - `nombre`: Nombre del idioma.
 
 **stg_clientes_northwind**
 - Modelo staging de clientes de Northwind.
-	- `id`: Identificador único del cliente.
-	- `nombre_empresa`: Nombre de la empresa.
+  - `id`: Identificador único del cliente.
+  - `nombre_empresa`: Nombre de la empresa.
 
 **int_peliculas_con_idioma**
-- Une películas con su idioma.
-	- `id`: Identificador único de la película.
-	- `idioma`: Nombre del idioma de la película.
-	- `puntaje`: Puntaje de la película.
+- Modelo intermediate que une películas con su idioma.
+  - `id`: Identificador único de la película.
+  - `idioma`: Nombre del idioma de la película.
+  - `puntaje`: Puntaje de la película.
 
 **obt_cant_peliculas_por_idioma**
 - Mart con la cantidad de películas por idioma.
-	- `idioma`: Nombre del idioma.
-	- `cantidad_peliculas`: Cantidad de películas en ese idioma.
+  - `idioma`: Nombre del idioma.
+  - `cantidad_peliculas`: Cantidad de películas en ese idioma.
 
 
 ## Fuentes de datos utilizadas
