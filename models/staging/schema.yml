@@ -1,0 +1,53 @@
+version: 2
+
+models:
+  - name: stg_peliculas
+    description: "Modelo staging de películas, renombra y estandariza campos de la tabla film."
+    columns:
+      - name: id
+        description: "Identificador único de la película."
+        tests:
+          - unique
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 1
+      - name: idioma_id
+        description: "Identificador del idioma de la película."
+        tests:
+          - not_null
+      - name: titulo
+        description: "Título de la película."
+        tests:
+          - not_null
+      - name: puntaje
+        description: "Puntaje de la película."
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 10
+
+  - name: stg_idioma
+    description: "Modelo staging de idiomas, renombra y estandariza campos de la tabla language."
+    columns:
+      - name: id
+        description: "Identificador único del idioma."
+        tests:
+          - unique
+          - not_null
+      - name: nombre
+        description: "Nombre del idioma."
+        tests:
+          - not_null
+
+  - name: stg_clientes_northwind
+    description: "Modelo staging de clientes de Northwind."
+    columns:
+      - name: id
+        description: "Identificador único del cliente."
+        tests:
+          - unique
+          - not_null
+      - name: nombre_empresa
+        description: "Nombre de la empresa."
+        tests:
+          - not_null

@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: obt_cant_peliculas_por_idioma
+    description: "Mart con la cantidad de películas por idioma."
+    columns:
+      - name: idioma
+        description: "Nombre del idioma."
+        tests:
+          - not_null
+      - name: cantidad_peliculas
+        description: "Cantidad de películas en ese idioma."
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0

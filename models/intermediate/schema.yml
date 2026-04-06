@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: int_peliculas_con_idioma
+    description: "Modelo intermediate que une películas con su idioma."
+    columns:
+      - name: id
+        description: "Identificador único de la película."
+        tests:
+          - not_null
+      - name: idioma
+        description: "Nombre del idioma de la película."
+        tests:
+          - not_null
+      - name: puntaje
+        description: "Puntaje de la película."
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 10
