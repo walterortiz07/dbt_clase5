@@ -95,5 +95,3 @@ A continuación se muestran los DAGs (grafos de dependencias) generados por dbt 
 - Únete al [chat de la comunidad](https://community.getdbt.com/)
 - Encuentra [eventos de dbt](https://events.getdbt.com)
 - Lee el [blog de dbt](https://blog.getdbt.com/)
-
-# dbt_clase5
