@@ -1,7 +1,7 @@
 
 Welcome to tu proyecto dbt!
 
-## Documentación de modelos y columnas clave
+## Documentación de modelos y columnas clave (Tarea 5)
 
 Todos los modelos y sus columnas principales están documentados en los archivos schema.yml. Esto permite que la documentación generada por dbt sea clara y útil para cualquier usuario del proyecto.
 
@@ -77,7 +77,7 @@ A continuación se muestran capturas de los resultados de los tests y dashboards
 ### Dashboard de documentación
 ![Dashboard](test_dashboards.png)
 
-## DAGs generados por dbt docs
+## DAGs generados por dbt docs (Tarea 6)
 
 A continuación se muestran los DAGs (grafos de dependencias) generados por dbt docs para este proyecto:
 
